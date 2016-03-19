@@ -25,8 +25,10 @@ printf("\n x: %.25f\n", x)
 % :: Erro(xs) = |(VA - VE) / VE| * 100% ::
 % :: VA = Valor armazenado :: VE = Valor exato ::
 
-% Calculo do erro estimado
-erroestimado = ((a-x)/x)*100  % Não funciona, pois octave armazena short como long
+% Calculo do erro estimado:
+% Não funciona, pois octave armazena short como long.
+% Ver exemplo em C no arquivo erroEstimado.c
+erroestimado = ((a-x)/x)*100  
 
 % Variável real IEEE 32 bits :
 MP = single(3.4e38)  % maior valor
