@@ -11,7 +11,7 @@
 % SE (expoente = 0) E (mantissa = 0) :
 %     valor = 0;
 % SE (expoente = 255) E (mantissa = 0) :
-%     valor = ∞ 
+%     valor = ∞
 % SE (expoente = 255) E (mantissa ≠ 0) :
 %     valor = NaN
 
@@ -28,7 +28,7 @@ printf("\n x: %.25f\n", x)
 % Calculo do erro estimado:
 % Não funciona, pois octave armazena short como long.
 % Ver exemplo em C no arquivo erroEstimado.c
-erroestimado = ((a-x)/x)*100  
+erroestimado = ((a-x)/x)*100
 
 % Variável real IEEE 32 bits :
 MP = single(3.4e38)  % maior valor
@@ -38,7 +38,7 @@ mp = single(1.5e-45)  % menor valor
 MP = double(1.7976e308)  % maior valor
 mp = double(4.9406e-324)  % menor valor
 
-1/3 
+1/3
 printf("\n 1/3: %.25f\n", ans)
 
 % ERROS DE ARREDONDAMENTO:
@@ -46,10 +46,8 @@ printf("\n 1/3: %.25f\n", ans)
 %   Operações Aritméticas
 %   variável real IEEE 32bits
 %   Racionais
-%   Irracionais 
+%   Irracionais
 
 % ERRO DE TRUNCAMENTO = Erro do método numérico
 
 % ERROS INERENTES = Vêm dos dados
-
-

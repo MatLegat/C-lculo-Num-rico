@@ -8,7 +8,6 @@ function residuoMax(x, n, A, b)
     end
     r(i) = abs(soma - b(i));
   end
-  r
   r = max(r);
 
 end
