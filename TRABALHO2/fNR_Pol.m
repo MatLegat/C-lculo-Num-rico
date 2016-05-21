@@ -1,4 +1,4 @@
-function [x M k difDif critParada] = fNR_Pol(n, a, xI, tol)
+function [x M k critParada] = fNR_Pol(n, a, xI, tol)
     k=0;
     difAnt = 1e20;
     difDif = 1;
@@ -15,9 +15,9 @@ function [x M k difDif critParada] = fNR_Pol(n, a, xI, tol)
         difAnt = dif;
     end
     if (difDif <= tol)
-        critParada = ["A diferença das diferenças (" mat2str(difDif) ") é menor do que a tolerância (" mat2str(tol) ")."];
+        critParada = ["A diferença das diferenças (" mat2str(difDif) ") é\n\t\tmenor do que a tolerância (" mat2str(tol) ")."];
     elseif (dif <= tol)
-        critParada = ["A diferença (" mat2str(dif) ") é menor do que a tolerância (" mat2str(tol) ")."];
+        critParada = ["A diferença (" mat2str(dif) ") é menor do que\n\t\ta tolerância (" mat2str(tol) ")."];
     else
         critParada = ["O numero de iterações atingiu o limite (120)."];
     endif
